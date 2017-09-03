@@ -3,7 +3,7 @@ from os import path
 
 setup(
 	name='nodel',
-	version='0.1.2',
+	version='0.1.3',
 	packages=['nodel'],
 	url='https://github.com/ary4n/nodel',
 	license='MIT',
