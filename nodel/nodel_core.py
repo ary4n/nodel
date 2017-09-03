@@ -17,7 +17,7 @@ def register(group=None, action=None, description=None):
 	return decorator
 
 
-def call(params):
+def django(params):
 	os.system("python ./core/manage.py " + params)
 
 
@@ -36,10 +36,10 @@ def run():
 		if method[0] in functions:
 			if len(method) > 1:
 				if method[1] in functions[method[0]]:
-					functions[method[0]][method[1]]['function'](args[2:], call)
+					functions[method[0]][method[1]]['function'](args[2:], django)
 				else:
 					method_not_found(args[1])
 			else:
-				functions[method[0]]['default']['function'](args[2:], call)
+				functions[method[0]]['default']['function'](args[2:], django)
 		else:
 			method_not_found(args[1])
