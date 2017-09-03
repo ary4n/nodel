@@ -11,6 +11,7 @@ setup(
 	author_email='alikhaniaryan@live.com',
 	description='django project manager',
 	keywords='minimal django project manager',
+	download_url="https://github.com/ary4n/nodel/archive/0.1.5.tar.gz",
 	install_requires=[
 		'python-dotenv',
 	],
