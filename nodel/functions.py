@@ -1,7 +1,7 @@
 from os import environ
 import os
-from . import structure
-from . import nodel_core
+from nodel import structure
+from nodel import nodel_core
 
 
 @nodel_core.register(group='run')
