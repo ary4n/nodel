@@ -1,4 +1,1 @@
 recursive-include nodel *
-global-exclude *pyc
-global-exclude .project
-global-exclude .pydevproject

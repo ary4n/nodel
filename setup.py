@@ -1,9 +1,8 @@
-from setuptools import setup, find_packages  # Always prefer setuptools over distutils
-from os import path
+from distutils.core import setup
 
 setup(
 	name='nodel',
-	version='0.2.4',
+	version='0.2.7',
 	packages=['nodel'],
 	url='https://github.com/ary4n/nodel',
 	license='MIT',
@@ -11,7 +10,7 @@ setup(
 	author_email='alikhaniaryan@live.com',
 	description='django project manager',
 	keywords='minimal django project manager',
-	download_url="https://github.com/ary4n/nodel/archive/0.2.4.tar.gz",
+	download_url="https://github.com/ary4n/nodel/archive/0.2.7.tar.gz",
 	install_requires=[
 		'python-dotenv',
 	],
