@@ -1,8 +1,5 @@
 import sys
-import os
 from dotenv import load_dotenv
-
-from . import framework
 
 functions = {}
 

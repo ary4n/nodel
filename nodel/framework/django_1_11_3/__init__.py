@@ -1,7 +1,6 @@
-import os
-from nodel.structure.common import *
+from nodel.framework.common import *
 from dotenv import set_key
-from nodel.structure import modules
+from nodel.framework import modules
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -44,20 +43,20 @@ def make_project(base_dir):
 		os.mkdir(path)
 
 	create_init_file(path)
-	create_file(path, 'manage.py', os.path.join(HERE, 'manage.txt'))
+	create_file(path, 'manage.py', os.path.join(HERE, 'manage.py'))
 
 	path = os.path.join(base_dir, 'core', 'core')
 	if not os.path.exists(path):
 		os.mkdir(path)
 	create_init_file(path)
-	create_file(path, 'urls.py', os.path.join(HERE, 'urls.txt'))
-	create_file(path, 'wsgi.py', os.path.join(HERE, 'wsgi.txt'))
+	create_file(path, 'urls.py', os.path.join(HERE, 'urls.py'))
+	create_file(path, 'wsgi.py', os.path.join(HERE, 'wsgi.py'))
 
 	path = os.path.join(base_dir, 'core', 'core', 'config')
 	if not os.path.exists(path):
 		os.mkdir(path)
 	create_init_file(path)
 
-	create_file(path, 'base.py', os.path.join(HERE, 'config_base.txt'))
-	create_file(path, 'dev.py', os.path.join(HERE, 'config_dev.txt'))
-	create_file(path, 'prod.py', os.path.join(HERE, 'config_prod.txt'))
+	create_file(path, 'base.py', os.path.join(HERE, 'config_base.py'))
+	create_file(path, 'dev.py', os.path.join(HERE, 'config_dev.py'))
+	create_file(path, 'prod.py', os.path.join(HERE, 'config_prod.py'))

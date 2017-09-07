@@ -1,11 +1,10 @@
-from os import environ
 import os
-from . import framework, nodel_core
+from nodel import framework, nodel_core
 
 
 @nodel_core.register(group='run')
 def run_server(params):
-	os.nodel_core.nodel_core.django('runserver %s:%s' % (os.environ.get('ADDRESS', 'localhost'), os.environ.get('PORT', '8000')))
+	nodel_core.django('runserver %s:%s' % (os.environ.get('ADDRESS', 'localhost'), os.environ.get('PORT', '8000')))
 
 
 @nodel_core.register(group='run', action='service')
@@ -47,12 +46,12 @@ def make_service(params):
 
 @nodel_core.register(group='make', action='project')
 def make_project(params):
-	version = input('Specify nodel_core.django project version (default is 1.11.3):')
+	version = input('Specify django project version (default is 1.11.3):')
 	if not version:
 		version = '1.11.3'
 	version = version.replace('.', '_')
 
-	nodel_core.django = getattr(framework, 'nodel_core.django_%s' % version, None)
+	nodel_core.django = getattr(framework, 'django_%s' % version, None)
 	if nodel_core.django:
 		nodel_core.django.make_project(nodel_core.root_path())
 	else:
